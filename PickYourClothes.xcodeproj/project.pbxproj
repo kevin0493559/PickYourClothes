@@ -15,7 +15,6 @@
 		CCA67E2C18E1DE9E00C0D204 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CCA67E2A18E1DE9E00C0D204 /* InfoPlist.strings */; };
 		CCA67E2E18E1DE9E00C0D204 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA67E2D18E1DE9E00C0D204 /* main.m */; };
 		CCA67E3218E1DE9E00C0D204 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA67E3118E1DE9E00C0D204 /* AppDelegate.m */; };
-		CCA67E3518E1DE9E00C0D204 /* PickYourClothes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CCA67E3318E1DE9E00C0D204 /* PickYourClothes.xcdatamodeld */; };
 		CCA67E3718E1DE9E00C0D204 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCA67E3618E1DE9E00C0D204 /* Images.xcassets */; };
 		CCA67E3E18E1DE9E00C0D204 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA67E3D18E1DE9E00C0D204 /* XCTest.framework */; };
 		CCA67E3F18E1DE9E00C0D204 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA67E1F18E1DE9E00C0D204 /* Foundation.framework */; };
@@ -57,7 +56,6 @@
 		CCA67E2F18E1DE9E00C0D204 /* PickYourClothes-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PickYourClothes-Prefix.pch"; sourceTree = "<group>"; };
 		CCA67E3018E1DE9E00C0D204 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CCA67E3118E1DE9E00C0D204 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CCA67E3418E1DE9E00C0D204 /* PickYourClothes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PickYourClothes.xcdatamodel; sourceTree = "<group>"; };
 		CCA67E3618E1DE9E00C0D204 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CCA67E3C18E1DE9E00C0D204 /* PickYourClothesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PickYourClothesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCA67E3D18E1DE9E00C0D204 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -152,7 +150,6 @@
 				CCA67E6B18E1E6CE00C0D204 /* AddPhotoCamera */,
 				CCA67E5618E1DEE600C0D204 /* Weather */,
 				CCA67E3618E1DE9E00C0D204 /* Images.xcassets */,
-				CCA67E3318E1DE9E00C0D204 /* PickYourClothes.xcdatamodeld */,
 				CCA67E2818E1DE9E00C0D204 /* Supporting Files */,
 			);
 			path = PickYourClothes;
@@ -346,7 +343,6 @@
 			files = (
 				CCA67E6318E1DF0500C0D204 /* WXManager.m in Sources */,
 				CCA67E6418E1DF0500C0D204 /* WXDailyForecast.m in Sources */,
-				CCA67E3518E1DE9E00C0D204 /* PickYourClothes.xcdatamodeld in Sources */,
 				CCA67E6A18E1E01000C0D204 /* PickYourClothesMainViewController.m in Sources */,
 				CCA67E6518E1DF0500C0D204 /* WXClient.m in Sources */,
 				CCA67E3218E1DE9E00C0D204 /* AppDelegate.m in Sources */,
@@ -471,6 +467,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PickYourClothes/PickYourClothes-Prefix.pch";
 				INFOPLIST_FILE = "PickYourClothes/PickYourClothes-Info.plist";
@@ -485,6 +485,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PickYourClothes/PickYourClothes-Prefix.pch";
 				INFOPLIST_FILE = "PickYourClothes/PickYourClothes-Info.plist";
@@ -564,19 +568,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		CCA67E3318E1DE9E00C0D204 /* PickYourClothes.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				CCA67E3418E1DE9E00C0D204 /* PickYourClothes.xcdatamodel */,
-			);
-			currentVersion = CCA67E3418E1DE9E00C0D204 /* PickYourClothes.xcdatamodel */;
-			path = PickYourClothes.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = CCA67E1418E1DE9E00C0D204 /* Project object */;
 }
